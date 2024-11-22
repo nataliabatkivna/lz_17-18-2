@@ -186,7 +186,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		MessageBox::Show("¬вед≥ть пароль !!!", "”вага!!!", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 	}
-	else if (textBox1->Text == "COM" && textBox2->Text == "014")
+	else if (textBox1->Text == "NANA" && textBox2->Text == "1907")
 	{
 		this->Hide();
 		MyForm1^ form2 = gcnew MyForm1();

@@ -54,7 +54,7 @@ namespace Project1 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -248,56 +248,69 @@ namespace Project1 {
 			pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 		}
 	}
-private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (radioButton1->Checked == true)
-	{
-		MyForm1::BackColor = Color::YellowGreen;
+	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (radioButton1->Checked == true)
+		{
+			MyForm1::BackColor = Color::YellowGreen;
+		}
 	}
-}
-private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (radioButton1->Checked == true)
-{
-		MyForm1::BackColor = Color::Red;
-}
-}
-private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (radioButton1->Checked == true)
-	{
-		MyForm1::BackColor = Color::Yellow;
+	private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (radioButton2->Checked == true)
+		{
+			MyForm1::BackColor = Color::Red;
+		}
 	}
-}
-private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (radioButton4->Checked == true)
-	{
-		pictureBox1->Image = System::Drawing::Bitmap::FromFile("11n.png");
-		pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+	private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (radioButton3->Checked == true)
+		{
+			MyForm1::BackColor = Color::Yellow;
+		}
 	}
-}
-private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (radioButton5->Checked == true)
-	{
-		pictureBox1->Image = System::Drawing::Bitmap::FromFile("22n.png");
-		pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-	}  
-}
-private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (radioButton7->Checked == true)
-	{
-		pictureBox1->Image = System::Drawing::Bitmap::FromFile("44n.png");
-		pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+	private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (radioButton4->Checked == true)
+		{
+			pictureBox1->Image = System::Drawing::Bitmap::FromFile("11n.png");
+			pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+		}
 	}
-}
-private: System::Void MyForm1_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
-	if (System::Windows::Forms::MessageBox::Show(
-		"Закрити вікно?", "Вікно буде закрите",
-		System::Windows::Forms::MessageBoxButtons::YesNo,
-		System::Windows::Forms::MessageBoxIcon::Question)
-		== System::Windows::Forms::DialogResult::Yes) {
-		Application::ExitThread();
+	private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (radioButton5->Checked == true)
+		{
+			pictureBox1->Image = System::Drawing::Bitmap::FromFile("22n.png");
+			pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+		}
 	}
-	else {
-		e->Cancel = true;
+	private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (radioButton7->Checked == true)
+		{
+			pictureBox1->Image = System::Drawing::Bitmap::FromFile("44n.png");
+			pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+		}
 	}
-}
+	private: System::Void MyForm1_FormClosing_1(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+		if (System::Windows::Forms::MessageBox::Show
+		("Закрити вікно?", "Вікно буде закрите",
+			System::Windows::Forms::MessageBoxButtons::YesNo,
+			System::Windows::Forms::MessageBoxIcon::Question)
+			== System::Windows::Forms::DialogResult::Yes)
+		{
+			Application::ExitThread();
+		}
+		else {
+			e->Cancel = true;
+		}
+	}
+
+	private: System::Void MyForm1_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+		if (System::Windows::Forms::MessageBox::Show("Закрити вікно?", "Вікно буде закрите",
+			System::Windows::Forms::MessageBoxButtons::YesNo, System::Windows::Forms::MessageBoxIcon::Question)
+			== System::Windows::Forms::DialogResult::Yes) {
+			Application::ExitThread();
+		}
+		else {
+			e->Cancel = true;
+		}
+	}
+	
 };
 }
